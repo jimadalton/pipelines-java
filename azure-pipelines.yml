@@ -27,7 +27,7 @@ steps:
       # Write your PowerShell commands here.
       
       Write-Host "Hello World Again"
-      Write-Host ("Now this is {0}" -f $env:MYVAR1)
+      Write-Host ("Now this is {0}" -f $env:MYVAR2)
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'

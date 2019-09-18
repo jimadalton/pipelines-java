@@ -19,7 +19,7 @@ steps:
       
       Write-Host "Hello World" -ForegroundColor Yellow;
       Write-Host ("This is {0}" -f $env:MYVAR1)
-      $env:MYVAR1 = "my second pipeline!"
+      echo "##vso[task.setvariable variable=MYVAR2;isOutput=true]my second pipeline!"
 - task: PowerShell@2
   inputs:
     targetType: 'inline'

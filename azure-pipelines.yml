@@ -1,12 +1,4 @@
 # Maven
-- task: PowerShell@2
-  inputs:
-    targetType: 'inline'
-    script: |
-      # Write your PowerShell commands here.
-      
-      Write-Host "Hello World" -ForegroundColor Yellow;
-      Write-Host ("This is {0}" -f $env:MYVAR1)
 # Build your Java project and run tests with Apache Maven.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
@@ -18,6 +10,16 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: |
+      # Write your PowerShell commands here.
+      
+      Write-Host "Hello World" -ForegroundColor Yellow;
+      Write-Host ("This is {0}" -f $env:MYVAR1)
+      
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'

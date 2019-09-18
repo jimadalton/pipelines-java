@@ -5,7 +5,7 @@
     script: |
       # Write your PowerShell commands here.
       
-      Write-Host "Hello World" -ForegroundColor Yellow
+      Write-Host "Hello World" -ForegroundColor Yellow;
       Write-Host ("This is {0}" -f $env:MYVAR1)
 # Build your Java project and run tests with Apache Maven.
 # Add steps that analyze code, save build artifacts, deploy, and more:
